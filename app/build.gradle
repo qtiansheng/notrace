@@ -27,12 +27,12 @@ dependencies {
 //    implementation project(path: ':buildSrc')
 }
 
-//notrace{
-//    pluginName = "notrace" //插件名称随意命名
-//    //接收事件处理类（插件会将以下自定义类的相关方法插入目标方法中）
-//    targetClassName = 'com.wondertek.tracepoint.InterceptEventHanlder'
-//    //开启会将修改后的文件copy一份到app/build/notrace目录下，用于查看修改结果
-//    outputModifyFile = true
-//    //目标包名 数组类型（一般场景写业务模块包名即可）
-//    targetPackages = ['com.wondertek']
-//}
+noTracePoint{
+    pluginName = "noTracePoint" //插件名称随意命名
+    //接收事件处理类（插件会将以下自定义类的相关方法插入目标方法中）
+    targetClassName = 'com.wondertek.tracepoint.InterceptEventHanlder'
+    //开启会将修改后的文件copy一份到app/build/notrace目录下，用于查看修改结果
+    outputModifyFile = true
+    //目标包名 数组类型（一般场景写业务模块包名即可）
+    targetPackages = ['com.wondertek.tracepoint']
+}
