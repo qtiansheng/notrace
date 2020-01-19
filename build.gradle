@@ -6,13 +6,17 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url 'https://maven.aliyun.com/repository/public' }
-        
+//        maven { url 'https://github.com/qtiansheng/notrace/tree/master/noTracePlugin'}
+        maven {
+            url uri('./noTracePlugin/')
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
 
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.wondertek.plugin:notrace:1.0.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

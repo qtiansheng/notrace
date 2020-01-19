@@ -18,13 +18,15 @@ repositories {
     google()
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
 uploadArchives {
     repositories.mavenDeployer {
 //        def mavenDirPath = file('E:\\Maven\\GitHub\\Notrace')
 //        repository(url: "file://${mavenDirPath.absolutePath}")
-//        repository(url: "https://github.com/qtiansheng/notrace") {
-//            authentication(userName: 'qtiansheng@139.com', password: 'qtian8526')
-//        }
         repository(url: uri('../noTracePlugin'))
 
         pom.project {
