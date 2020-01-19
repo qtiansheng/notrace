@@ -28,7 +28,7 @@ uploadArchives {
         repository(url: uri('../noTracePlugin'))
 
         pom.project {
-            groupId "com.wondertek"
+            groupId "com.wondertek.plugin"
             artifactId "notrace"
             version "1.0.0"
         }
